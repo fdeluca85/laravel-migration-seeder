@@ -32,6 +32,6 @@ class CreateTripsTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trips_tables');
+        Schema::dropIfExists('trips');
     }
 }
