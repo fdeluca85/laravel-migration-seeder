@@ -20,7 +20,7 @@ class CreateTripsTables extends Migration
             $table->longText("description")->nullable();
             $table->dateTime("departure", 0);
             $table->dateTime("return", 0);
-            $table->float("price", 8, 2);
+            $table->float("price", 11, 2);
             $table->timestamps();
         });
     }

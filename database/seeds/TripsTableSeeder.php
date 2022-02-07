@@ -13,13 +13,15 @@ class TripsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $trip = new Trip();
-        $trip->city = $faker->city();
-        $trip->country = $faker->country();
-        $trip->description = $faker->paragraphs();
-        $trip->departure = $faker->dateTime();
-        $trip->return = $faker->dateTime();
-        $trip->price = $faker->randomDigit(2, 3);
-        $trip->save();
+        for ($i = 0; $i < 50; $i++) {
+            $trip = new Trip();
+            $trip->city = $faker->city();
+            $trip->country = $faker->country();
+            $trip->description = $faker->text(300);
+            $trip->departure = $faker->dateTime();
+            $trip->return = $faker->dateTime();
+            $trip->price = $faker->randomDigit(2, 3);
+            $trip->save();
+        }
     }
 }
