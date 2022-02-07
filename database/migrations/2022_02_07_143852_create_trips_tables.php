@@ -13,7 +13,7 @@ class CreateTripsTables extends Migration
      */
     public function up()
     {
-        Schema::create('trips_tables', function (Blueprint $table) {
+        Schema::create('trips', function (Blueprint $table) {
             $table->id();
             $table->string("city", 100);
             $table->string("country", 75);
